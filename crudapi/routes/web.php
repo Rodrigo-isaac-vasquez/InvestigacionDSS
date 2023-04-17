@@ -17,3 +17,14 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/cliente','LibroController@index');
+
+$router->get('/cliente/{id}','LibroController@ver');
+
+$router->post('/cliente','LibroController@guardar');
+
+$router->delete('/cliente/{id}','LibroController@eliminar');
+
+$router->post('/cliente/{id}', 'LibroController@actualizar');
+
+$router->patch('/cliente/{id}','LibroController@actualizar');
